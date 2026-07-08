@@ -1,9 +1,9 @@
 from google.adk.agents import LlmAgent
 
 from travel_agent.config import GEMINI_MODEL_1
-from travel_agent.tools.current_date import get_current_date
-from travel_agent.tools.weather import get_weather
 from travel_agent.tools.save_travel_plan import save_travel_plan
+from travel_agent.agents.mcp_client import travel_mcp
+
 
 travel_plan_generator = LlmAgent(
     name="travel_plan_generator",
@@ -62,6 +62,6 @@ Guidelines:
 - Return only the final Markdown travel guide.
 
 """,
-    tools=[get_current_date, get_weather, save_travel_plan],
+    tools=[travel_mcp, save_travel_plan],
     output_key="travel_guide",
 )
