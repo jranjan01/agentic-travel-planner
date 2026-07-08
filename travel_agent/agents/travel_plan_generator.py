@@ -1,13 +1,13 @@
 from google.adk.agents import LlmAgent
 
-from travel_agent.config import GEMINI_MODEL
+from travel_agent.config import GEMINI_MODEL_1
 from travel_agent.tools.current_date import get_current_date
 from travel_agent.tools.weather import get_weather
 from travel_agent.tools.save_travel_plan import save_travel_plan
 
 travel_plan_generator = LlmAgent(
     name="travel_plan_generator",
-    model=GEMINI_MODEL,
+    model=GEMINI_MODEL_1,
     description="Generates the final travel plan from the validated travel plan.",
     instruction="""
 You are an expert travel advisor.

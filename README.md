@@ -90,10 +90,10 @@ Include the current weather, today's date, travel tips, and a day-by-day itinera
 
 ## 📄 Sample Output
 
-Each generated travel guide is saved as a beautifully formatted Markdown document under the `travel_plans/` directory.
+Each generated travel guide is saved as a beautifully formatted Markdown document under the `travel-agent/travel_plans/` directory.
 
 ```text
-travel_plans/
+travel-agent/travel_plans/
 ├── tokyo_travel_guide.md
 ├── switzerland_travel_guide.md
 └── london_travel_guide.md

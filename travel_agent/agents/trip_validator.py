@@ -1,11 +1,11 @@
 from google.adk.agents import LlmAgent
 
-from travel_agent.config import GEMINI_LITE_MODEL
+from travel_agent.config import GEMINI_MODEL_2
 
 
 trip_validator = LlmAgent(
     name="trip_validator",
-    model=GEMINI_LITE_MODEL,
+    model=GEMINI_MODEL_2,
     description="Validates that the generated travel plan is complete and usable.",
     instruction="""
 Review the following travel plan.

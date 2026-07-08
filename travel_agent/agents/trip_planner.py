@@ -1,12 +1,12 @@
 from google.adk.agents import LlmAgent
 from google.adk.tools import google_search
 
-from travel_agent.config import GEMINI_MODEL
+from travel_agent.config import GEMINI_MODEL_1
 
 
 trip_planner = LlmAgent(
     name="trip_planner",
-    model=GEMINI_MODEL,
+    model=GEMINI_MODEL_1,
     description="Creates a structured travel plan based on the user's travel request.",
     instruction="""
 You are a travel planning specialist.

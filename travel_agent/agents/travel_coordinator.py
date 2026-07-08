@@ -2,12 +2,12 @@ from google.adk.agents import LlmAgent
 
 from travel_agent.agents.validated_trip_planner import validated_trip_planner
 from travel_agent.agents.travel_plan_generator import travel_plan_generator
-from travel_agent.config import GEMINI_MODEL
+from travel_agent.config import GEMINI_MODEL_1
 
 
 travel_coordinator = LlmAgent(
     name="travel_coordinator",
-    model=GEMINI_MODEL,
+    model=GEMINI_MODEL_1,
     description="Coordinates the end-to-end travel planning workflow by delegating tasks to specialized travel agents.",
     instruction="""
 You are an AI Travel Coordinator.
