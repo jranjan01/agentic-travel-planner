@@ -1,4 +1,5 @@
 from google.adk.tools.mcp_tool.mcp_toolset import MCPToolset, StdioServerParameters
+from travel_agent.config import FILE_PATH
 
 travel_mcp = MCPToolset(
     connection_params=StdioServerParameters(
@@ -6,7 +7,7 @@ travel_mcp = MCPToolset(
         args=[
             "run",
             "python",
-            "/Users/<....>/workplace/travel-mcp-server/server.py",
+            FILE_PATH,
         ],
     )
 )

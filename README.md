@@ -25,33 +25,25 @@ An AI-powered travel planning application built with **Python**, **Google Agent 
                         User
                           │
                           ▼
-                 Travel Coordinator
+               Travel Workflow (SequentialAgent)
+                          │
+        ┌─────────────────┴─────────────────┐
+        ▼                                   ▼
+Validated Trip Planner (LoopAgent)    Travel Guide Generator
+        │                                   │
+        │                                   ├── Google Search
+        │                                   ├── MCP Client
+        │                                   └── Save Travel Plan
+        │
+        ├── Trip Planner
+        │
+        └── Trip Validator
+               ▲
+               │
+         retry until "ok"
                           │
                           ▼
-          Travel Plan Generator (LoopAgent)
-                │                     │
-                ▼                     ▼
-          Trip Planner         Trip Validator
-                │
-                ▼
-         Google Search Tool
-                │
-                ▼
-        MCP Client (ADK Tool)
-                │
-────────────────────────────────────────────
-                │
-           Travel MCP Server
-                │
-      ┌─────────┴─────────┐
-      ▼                   ▼
- Weather Tool       Current Date Tool
-                │
-                ▼
-       Markdown Travel Guide
-                │
-                ▼
-      Save Travel Plan Tool
+                Final Markdown Guide
 ```
 
 ---

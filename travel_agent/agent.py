@@ -1,3 +1,3 @@
-from travel_agent.agents.travel_coordinator import travel_coordinator
+from travel_agent.agents.travel_workflow import travel_workflow
 
-root_agent = travel_coordinator
+root_agent = travel_workflow
